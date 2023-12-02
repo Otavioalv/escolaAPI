@@ -10,5 +10,6 @@ export async function routes(fastify:FastifyInstance, options: FastifyPluginOpti
 
     fastify.get("/alunos", async(req: FastifyRequest, res: FastifyReply) => {
         return new ListCustomersController().handle(req, res);
-    })
+    });
+
 }
