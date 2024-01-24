@@ -10,14 +10,14 @@ app.setErrorHandler((err, req, res) => {
 
 const PORT:number = 8090;
 
-const start = async () => {
+async function start() {
     
     await app.register(cors);
     await app.register(routes);
 
     try {
         await app.listen({port: PORT}, () => {
-            console.log(`\nAPI rodando na url >>> http://localhost:${PORT}\n`);
+            console.log(`API rodando na url >>> http://localhost:${PORT}\n`);
         })
 
     } catch(err) {

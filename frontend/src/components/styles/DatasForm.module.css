@@ -1,0 +1,100 @@
+.datasForm {
+    padding: 1.5em;
+}   
+
+.datasForm__form {
+    width: 300px;
+}
+
+.datasForm__form__Container {
+    width: 100%;
+    margin: 1.5em 0;
+}
+
+.datasForm__form__Container div {
+    position: relative;
+    border-radius: .5em;
+    margin: 1.5em 0;
+    width: 100%;
+}
+
+.datasForm__form__Container div > input, .datasForm__form__Container div > select{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    border-radius: .5em;
+    margin: 0;
+}
+
+.datasForm__form select {
+    cursor: pointer;
+
+    appearance: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: none;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.datasForm__form__Container div >  label{
+    font-size: .9em;
+    color: red;
+}
+
+.datasForm__form__Container div > label > svg {
+    position: absolute;
+    right: 3%;
+    top: 65%; /* 50 */
+    transform: translate(-3%, -50%);
+    width: 1.5em;
+    height: 1.5em;
+
+}
+
+.datasForm__form__Container input {
+    transition: var(--transitionParams);
+    outline: none;
+}
+
+.datasForm__form__Container input:disabled {
+    color: var(--colorGray);
+}
+
+.datasForm__form input[type="submit"] {
+    background-color: rgb(255, 255, 255);
+    color: red;
+    border: 1px solid black;
+    border-radius: .5em;
+    padding: .7em;
+    cursor: pointer;
+    width: 100%;
+}
+
+.datasForm__form input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.datasForm__form input[type='password'] svg{
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.datasForm__form input:hover, .datasForm__form input:focus, .datasForm__form select:hover, .datasForm__form select:focus{
+    border: 1px solid red;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.06);
+}

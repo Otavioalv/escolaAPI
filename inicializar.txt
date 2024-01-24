@@ -1,0 +1,13 @@
+npm init -y 
+
+npm i typescript --save-dev
+
+tsc --init
+
+cria pasta src e new file server.ts e router.ts
+
+npm install fastify @fastify/cors
+
+npm i tsx
+
+dev "tsx watsh src/server.ts"

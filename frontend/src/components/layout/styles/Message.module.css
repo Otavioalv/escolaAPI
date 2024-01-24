@@ -1,0 +1,59 @@
+
+.message {
+    z-index: 10000000;
+    position: fixed;
+    top: 85%;
+    left: 80%;
+
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.message h1 {
+    font-size: 1em;
+}
+
+.message h2 {
+    font-size: .9em;
+    color: red;
+}
+
+
+.border-red {
+    border: 1px solid var(--colorRed);
+    box-shadow: 0 0 10px var(--colorRedOpacity);
+}
+
+.border-red h2{
+    color: var(--colorRed);
+}
+
+
+.border-green {
+    border: 1px solid var(--colorGreen);
+    box-shadow: 0 0 10px var(--colorGreenOpacity);
+}
+
+.border-green h2 {
+    color: var(--colorGreen);
+}
+
+
+.border-blue {
+    border: 1px solid var(--colorBlue);
+    box-shadow: 0 0 10px var(--colorBlueOpacity);
+}
+
+.border-blue h2 {
+    color: var(--colorBlue);
+}
+
+
+.border-yellow {
+    border: 1px solid var(--colorYellow);
+    box-shadow: 0 0 10px var(--colorYellowOpacity);
+}
+
+.border-yellow h2{
+    color: var(--colorYellow);
+}

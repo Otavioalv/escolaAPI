@@ -1,0 +1,8 @@
+.containerCard {
+    background-color: white;
+    padding: 1.5em;
+    width: 100%;
+    border-radius: 1em;
+    margin: .5em;
+    box-shadow: .2em .2em 1em var(--colorGrayOpacity);
+}

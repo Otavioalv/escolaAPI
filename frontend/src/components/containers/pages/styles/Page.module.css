@@ -1,0 +1,10 @@
+.Page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5em 0;
+    padding-top: 13em;
+    min-height: 87.5vh;
+    /* width: 100%; */
+}

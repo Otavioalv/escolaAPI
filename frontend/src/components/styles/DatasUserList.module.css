@@ -1,0 +1,93 @@
+.datasUserList {
+    width: 100vh;
+    display: flex;
+    margin: 1em 0;
+    padding: 3em 0;
+    border-bottom: 1px solid var(--colorGray);
+}
+
+.datasUserList:last-child {
+    border-bottom: 0px;
+}
+
+.datasUserList img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.datasUserList__about {
+    padding: 2em;
+    width: 100%;
+    
+}
+
+.datasUserList__about ul{
+    list-style: none;
+}
+
+.datasUserList__about ul > li {
+    margin: .5em 0;
+}
+
+.datasUserList__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.datasUserList__buttons button {
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 1em;
+    margin: 1em;
+    cursor: pointer;
+    transition: var(--transitionParams);
+}
+
+.datasUserList__buttons .red {
+    border-color: var(--colorRed);
+}
+
+.datasUserList__buttons .red:hover {
+    box-shadow: 0 0 10px var(--colorRedOpacity);
+}
+
+.datasUserList__buttons .green {
+    border-color: var(--colorGreen);
+}
+
+.datasUserList__buttons .green:hover {
+    box-shadow: 0 0 10px var(--colorGreenOpacity);
+}
+
+.datasUserList__buttons .yellow {
+    border-color: var(--colorYellow);
+}
+
+.datasUserList__buttons .yellow:hover {
+    box-shadow: 0 0 10px var(--colorYellowOpacity);
+}
+
+.datasUserList__buttons .blue {
+    border-color: var(--colorBlue);
+}
+
+.datasUserList__buttons .blue:hover {
+    box-shadow: 0 0 10px var(--colorBlueOpacity);
+}
+
+
+
+/* .datasUserList__buttons button:hover {
+    border-color: greenyellow;
+    box-shadow: 0 0 30px rgb(173, 255, 47, 0.06);
+} */
+
+.datasUserList__buttons button a{
+    padding: .5em 2em;
+    color: black;
+    text-decoration: none;
+}
+

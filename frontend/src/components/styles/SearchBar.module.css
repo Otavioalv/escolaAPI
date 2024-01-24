@@ -1,0 +1,31 @@
+.searchBar {
+    border-radius: 2em;
+    overflow: hidden;
+    min-height: 3em;
+    display: flex;
+    width: 50%;
+}
+
+.searchBar button {
+    background-color: var(--colorGrayOpacity);
+    border-radius: 0 2em 2em 0;    
+    padding: 1em;
+    margin: 0;
+    cursor: pointer;
+}
+
+.searchBar input {
+    width: 100%;   
+    border-radius: 2em 0 0 2em;
+    padding-left: 2em;
+    margin: 0;
+    outline: none;
+}
+
+.searchBar, .searchBar button, .searchBar input {
+    border: 1px solid var(--colorGray);
+}
+
+.searchBar svg {
+    width: 1em;
+}

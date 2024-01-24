@@ -1,0 +1,27 @@
+.handdleButton {
+    list-style: none;
+    display: flex;
+}
+
+.handdleButton li {
+    display: flex;
+    height: 2em;
+    width: 50%;
+}
+
+.handdleButton li > label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.handdleButton li input[type = "radio"]{
+    display: none;
+}
+
+.handdleButton li input[type="radio"]:checked + label {
+    box-shadow: -1px 0px 10px var(--colorGrayOpacity); 
+    color: red;
+}

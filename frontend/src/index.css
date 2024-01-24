@@ -1,0 +1,36 @@
+:root {
+    --colorGray: #cfcfcf;
+    --colorRed: #ff0000;
+    --colorGreen: #9cffa4;
+    --colorYellow: #ffff00;
+    --colorBlue: #0000ff;
+
+    --colorRedOpacity: #ff000063;
+    --colorGreenOpacity: #9cffa463;
+    --colorYellowOpacity: #ffff0063;
+    --colorBlueOpacity: #0000ff63;
+    --colorGrayOpacity: #c5c4c438;
+    --transitionParams: .3s all ease-in-out;
+}
+
+html, body {
+    background-color: #e0e0e013;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+
+h1 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: .9em;
+    font-weight: 100;
+}
+
+

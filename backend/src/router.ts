@@ -1,15 +1,14 @@
+require('dotenv').config();
+
 import { FastifyInstance, FastifyPluginOptions, FastifyReply, FastifyRequest } from "fastify";
-import { ListCustomersController } from "./controllers/ListAlunosController";
+
+const admin = require("./Features/Users/Admin/router");
+const aluno = require("./Features/Users/Aluno/router");
+const professor = require("./Features/Users/Professor/router");
 
 
 export async function routes(fastify:FastifyInstance, options: FastifyPluginOptions){
-    
-    fastify.get("/", async(req:FastifyRequest, res:FastifyReply) => {
-        return {ok: true};
-    });
-
-    fastify.get("/alunos", async(req: FastifyRequest, res: FastifyReply) => {
-        return new ListCustomersController().handle(req, res);
-    });
-
+    fastify.register(admin, {prefix: "/admin"});
+    fastify.register(aluno, {prefix: "/aluno"});
+    fastify.register(professor, {prefix: "/professor"});
 }

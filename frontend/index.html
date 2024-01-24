@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escola</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <div class='loader__container'>
+      <style>        
+        *{
+          padding: 0;
+          margin: 0;
+        }
+
+        .loader__container {
+          background-color: rgba(0, 0, 0, 0.281);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1000000;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+        .loader__container.hidden {
+          display: none;
+        }
+        .loader {
+          position: relative;
+          display: block;
+          --height-of-loader: 5px;
+          --loader-color: red;
+          width: 200px;
+          height: var(--height-of-loader);
+          border-radius: 30px;
+          background-color: rgb(209, 209, 209);
+          position: relative;
+        }
+
+        .loader::before {
+          content: "";
+          position: absolute;
+          background: var(--loader-color);
+          top: 0;
+          left: 0;
+          width: 0%;
+          height: 100%;
+          border-radius: 30px;
+          animation: moving 1s ease-in-out infinite;
+          ;
+        }
+
+        @keyframes moving {
+          50% {
+          width: 100%;
+          }
+
+          100% {
+          width: 0;
+          right: 0;
+          left: unset;
+          }
+        }
+      </style>
+      <div class='loader'></div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const loaderContainer = document.querySelector(".loader__container");
+          loaderContainer.classList.add("hidden");
+        });
+      </script>
+    </div>
+  </body>
+</html>

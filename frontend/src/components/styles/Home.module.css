@@ -1,0 +1,153 @@
+:root {
+    --gridImagesW: 660px;
+    --gridImagesH: 480px;
+}
+
+
+/* HOME */
+
+section {
+    padding: 3em 2em;
+    border-bottom: 1px solid var(--colorGray);
+}
+
+h4 {
+    color: red;
+}
+
+.fillDiv {
+    min-width: calc(var(--gridImagesW) - 45px);
+    min-height: var(--gridImagesH);
+}
+
+.home {
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    max-width: 70%;
+    /* margin: 5em 0; */
+    padding: 3em;
+    border-radius: 2em;
+    box-shadow: .2em .2em 1em var(--colorGrayOpacity);
+    /* margin-top: 10em; */
+}
+
+.about {
+    display: flex;
+    
+    padding: 0;
+    padding-bottom: 2em;
+}
+
+.about_images {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    width: var(--gridImagesW);
+    height: var(--gridImagesH);
+}
+
+.about_images div {
+    position: relative;
+    overflow: hidden;
+}
+
+.about_images img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about_images div:nth-child(1){
+    width: calc(var(--gridImagesW) - 45%);
+    height: calc(var(--gridImagesH) - 45%);
+}
+
+.about_images div:nth-child(2){
+    width: calc(var(--gridImagesW) - 55%);
+    height: calc(var(--gridImagesH) - 45%);
+    border-left: 1px solid white;
+}
+
+.about_images div:nth-child(3){
+    width: var(--gridImagesW);
+    height: calc(var(--gridImagesH) - 55%);
+    border-top: 1px solid white;
+}
+
+
+.about_logo {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1.5em;
+}
+
+
+
+.about_logo div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    margin: 4em 0;
+}
+
+.about_logo img {
+    width: 100px;
+    margin-right: 1em;
+    border-radius: 50%;
+}
+
+.about_logo_social {
+    width: 100%;
+}
+
+.about_logo_social ul{
+    display: flex;
+    justify-content: end;
+    list-style: none;
+}
+
+.about_logo_social li{
+    margin: .2em;
+    border-radius: 6em;
+    width: 70px;
+    height: 30px;
+    background-color: var(--colorGray);
+}
+
+/* ENDEREÇO */
+
+
+.endereco_list ul, .endereco_sociais ul{
+    display: flex;
+    list-style: none;
+    margin: 2em 0;
+}
+
+.endereco_sociais svg {
+    width: 30px;
+    height: 30px;
+}
+
+.endereco_sociais li{
+    cursor: pointer;
+    margin: 0 1em;
+}
+
+.endereco_sociais li:hover {
+    filter: brightness(70%);
+}
+
+.aboutPlus{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.aboutPlus div {
+    margin: 2em 0;
+}
