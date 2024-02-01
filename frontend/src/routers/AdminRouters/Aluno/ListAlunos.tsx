@@ -74,6 +74,7 @@ export default function ListAlunos({token}: {token: saveTokenProps}) {
         setLoading(false);
     }
 
+    console.log(listAluno);
 
     return(
         <>
@@ -82,8 +83,14 @@ export default function ListAlunos({token}: {token: saveTokenProps}) {
             ) : (
                 <LoadingWrapper loading={loading}>
                     <>
-                        <SearchBar handle={findById} placeholder='Buscar por id'/>
-                        <DatasUserList user={listAluno as []} title='Todos os alunos'  buttons={listButtons}/>
+                        {listAluno.length ? (
+                            <>
+                                <SearchBar handle={findById} placeholder='Buscar por id'/>
+                                <DatasUserList user={listAluno as []} title='Todos os alunos'  buttons={listButtons}/>
+                            </>
+                        ) : (
+                            'Não há alunos cadastrados'
+                        )}
                     </>
                 </LoadingWrapper>
                 

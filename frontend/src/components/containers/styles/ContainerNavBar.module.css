@@ -6,3 +6,94 @@
     height: 145px;
     background-color: white;
 }
+
+.checkbox {
+    display: none;
+    position: fixed;
+    transform: translate(50%, 50%);
+}
+
+#checkbox2 {
+    display: none;
+}
+  
+.toggle2 {
+    --w-toggle: 30px;
+    /* position: absolute;
+    top: 230px;
+    right: 25px; */
+    width: var(--w-toggle);
+    height: var(--w-toggle);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    transition-duration: .5s;
+}
+
+.bars {
+    width: 100%;
+    min-height: 3px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1em;
+}
+
+#bar5 {
+    transition-duration: .8s;
+}
+
+#bar4,#bar6 {
+    width: 100%;
+}
+
+#checkbox2:checked + .toggle2 .bars {
+    position: absolute;
+    transition-duration: .5s;
+}
+
+#checkbox2:checked + .toggle2 #bar5 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+}
+
+#checkbox2:checked + .toggle2 #bar4 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+
+#checkbox2:checked + .toggle2 #bar6 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+}
+
+#checkbox2:checked + .toggle2 {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+
+
+
+
+@media screen  and (max-width: 800px) { 
+    .container {
+        top: 0;
+        transition: var(--transitionParams);
+        transform: translateY(-100%);
+        height: auto;
+    }
+
+    .checkbox {
+        display: block;
+    }
+
+    #checkbox2:checked .container {
+        top: 0;
+    }
+
+    .checked {
+        transform: translateY(0%);
+    }
+} 

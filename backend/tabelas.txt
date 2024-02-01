@@ -1,0 +1,93 @@
+
+show create table admin;
+CREATE TABLE `admin` (
+	`id` int NOT NULL AUTO_INCREMENT,
+    `nome` varchar(100) DEFAULT NULL,
+    `cpf` varchar(100) DEFAULT NULL,
+    `data_nascimento` date DEFAULT NULL,
+    `senha` varchar(100) DEFAULT NULL,
+    PRIMARY KEY (`id`),
+	UNIQUE KEY `cpf` (`cpf`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci; 
+
+show create table aluno;
+CREATE TABLE `aluno` ( 
+	`id_aluno` int NOT NULL AUTO_INCREMENT, 
+    `nome` varchar(200) NOT NULL, 
+    `data_nascimento` date NOT NULL, 
+    `senha` varchar(100) DEFAULT NULL, 
+    `cpf` varchar(11) NOT NULL, 
+    `telefone` varchar(12) NOT NULL, 
+    
+    PRIMARY KEY (`id_aluno`),
+    UNIQUE KEY `cpf` (`cpf`)
+) ENGINE=InnoDB AUTO_INCREMENT=187 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+show create table curso;
+CREATE TABLE `curso` (
+	`id_curso` int NOT NULL AUTO_INCREMENT, 
+    `nome` varchar(200) DEFAULT NULL, 
+    
+    PRIMARY KEY (`id_curso`)
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+show create table matricula;
+CREATE TABLE `matricula` (
+	`id_matricula` int NOT NULL AUTO_INCREMENT,
+    `fk_cpf_aluno_ma` varchar(11) DEFAULT NULL,
+    `fk_id_notas_ma` int DEFAULT NULL,
+    `fk_id_registerProfessor_ma` int DEFAULT NULL,PRIMARY KEY (`id_matricula`),
+    
+    UNIQUE KEY `fk_cpf_aluno_ma` (`fk_cpf_aluno_ma`),
+    UNIQUE KEY `fk_id_notas_ma` (`fk_id_notas_ma`),
+    
+    KEY `fk_id_registerProfessor_ma` (`fk_id_registerProfessor_ma`),
+    CONSTRAINT `matricula_ibfk_1` FOREIGN KEY (`fk_cpf_aluno_ma`) REFERENCES `aluno` (`cpf`),
+    CONSTRAINT `matricula_ibfk_2` FOREIGN KEY (`fk_id_registerProfessor_ma`) REFERENCES `registerprofessor` (`id_registerProfessor`),
+    CONSTRAINT `matricula_ibfk_3` FOREIGN KEY (`fk_id_notas_ma`) REFERENCES `notas` (`id_notas`)
+) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+show create table notas;
+CREATE TABLE `notas` (
+  `id_notas` int NOT NULL AUTO_INCREMENT,
+  `notaA` int DEFAULT NULL,
+  `notaB` int DEFAULT NULL,
+  `notaC` int DEFAULT NULL,
+  `media` int DEFAULT NULL,
+  `situacao` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id_notas`)
+) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+show create table professor;
+CREATE TABLE `professor` (
+  `id_professor` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(200) NOT NULL,
+  `data_nascimento` date DEFAULT NULL,
+  `cpf` varchar(11) DEFAULT NULL,
+  `telefone` varchar(11) DEFAULT NULL,
+  `senha` varchar(100) DEFAULT NULL,
+  `diciplina` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id_professor`),
+  UNIQUE KEY `cpf` (`cpf`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+show create table registerprofessor;
+CREATE TABLE `registerprofessor` (
+  `id_registerProfessor` int NOT NULL AUTO_INCREMENT,
+  `fk_id_curso_rp` int DEFAULT NULL,
+  `fk_cpf_professor_rp` varchar(11) DEFAULT NULL,
+  
+  PRIMARY KEY (`id_registerProfessor`),
+  UNIQUE KEY `fk_id_curso_rp` (`fk_id_curso_rp`),
+  KEY `fk_cpf_professor_rp` (`fk_cpf_professor_rp`),
+  
+  CONSTRAINT `registerprofessor_ibfk_1` FOREIGN KEY (`fk_cpf_professor_rp`) REFERENCES `professor` (`cpf`),
+  CONSTRAINT `registerprofessor_ibfk_2` FOREIGN KEY (`fk_id_curso_rp`) REFERENCES `curso` (`id_curso`)
+  
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

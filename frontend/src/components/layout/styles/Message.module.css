@@ -57,3 +57,12 @@
 .border-yellow h2{
     color: var(--colorYellow);
 }
+
+@media screen  and (max-width: 800px) {
+    .message {
+        background-color: white;
+        top: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

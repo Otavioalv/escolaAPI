@@ -6,11 +6,6 @@
     margin: 1.5em 0;
 }
 
-/* .datasUserTable__table {
-    border: 1px solid black;
-    padding: 1.5em;
-} */
-
 .datasUserTable__table {    
     border-collapse: collapse;
     padding: 10px;
@@ -25,8 +20,6 @@
     text-align: center;
     width: 120px;
 }
-
-
 
 /* tbody > tr > th */
 /* tbody > tr > td */

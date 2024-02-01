@@ -49,11 +49,15 @@ export default function ListCursos({token}: {token: saveTokenProps}) {
 
     return (
         <LoadingWrapper loading={loading}>
-            <>  
-                {list.map((individualList, index) => (
-                    <DatasUserList user={[{nome: individualList.nome, id: individualList.id_curso}]} title="" useImg={false} buttons={listButtons} key={index}/>
-                ))}
-            </>
+            {list.length ? (
+                <>  
+                    {list.map((individualList, index) => (
+                        <DatasUserList user={[{nome: individualList.nome, id: individualList.id_curso}]} title="" useImg={false} buttons={listButtons} key={index}/>
+                    ))}
+                </>
+            ) : (
+                'Não há cursos cadastrados'
+            )}
         </LoadingWrapper>
     );
 }

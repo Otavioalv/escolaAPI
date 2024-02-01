@@ -4,8 +4,10 @@ import { AdminService } from "./service/AdminService";
 import { ListAdminProps } from "../../props/adminProps";
 import DatasUserList from "../../components/DatasUserList";
 import LoadingWrapper from "../../components/layout/LoadingWrapper";
+import { Reload } from "../../helper/reloadPage";
 
 export default function Admin({token}: {token: saveTokenProps}) {
+    Reload();
 
     const adminService: AdminService = new AdminService(token);
 

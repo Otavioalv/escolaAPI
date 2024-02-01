@@ -116,7 +116,6 @@ export default function DatasForm({datas, title, handleSubmit}: FormDatasProps) 
                                                                         disabled={datasArr[1].disabled}
                                                                     />
                                                                 </>
-                                                                /* datasValues[1].substring(0, 10).replace(/-/g, '/') */
                                                             )}
 
                                                             

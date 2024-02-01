@@ -173,9 +173,3 @@ export default function RegisterUser({token}: {token: saveTokenProps}) {
     );
 
 }
-
-
-/* 
-  `curso` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id_aluno`)
-*/

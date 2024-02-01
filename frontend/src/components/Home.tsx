@@ -11,9 +11,9 @@ export default function Home() {
                 <section className={styles.about}>
                     
                     <div className={styles.about_images}>
-                        <div><img src="https://via.placeholder.com/700" alt="imagem_escola" /></div>
-                        <div><img src="https://via.placeholder.com/700" alt="imagem_escola" /></div>
-                        <div><img src="https://via.placeholder.com/700" alt="imagem_escola" /></div>
+                        <div><img src="https://via.placeholder.com/1000" alt="imagem_escola" /></div>
+                        <div><img src="https://via.placeholder.com/1000" alt="imagem_escola" /></div>
+                        <div><img src="https://via.placeholder.com/1000" alt="imagem_escola" /></div>
                     </div>
 
                     <div className={styles.fillDiv}></div>

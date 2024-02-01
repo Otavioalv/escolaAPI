@@ -29,11 +29,11 @@ export class ProfessorService {
             const resultResponse = await result.data.StatusResponse as ListResponseProps;
             
             await setMessage(resultResponse);
-
             return resultDatas;
         } catch (err) {
             console.error(`Erro ao listar professor ${err}`);
             await setMessage(StatusCodes.InternalServerError);
+            
             return {} as ListProfessorProps;
         }
     }

@@ -44,24 +44,32 @@ import Home from './components/Home.tsx';
 import InitialPage from './components/containers/pages/InitialPage.tsx';
 import UserPage from './components/containers/pages/UserPage.tsx';
 import Admin from './routers/AdminRouters/Admin.tsx';
+import { navbarDatas } from './components/layout/NavBarUser.tsx';
+import Page404 from './components/Page404.tsx';
 
 const token:saveTokenProps = getToken();
 
-const navBarAdmin = {
+const navBarAdmin:navbarDatas = {
   admin: '/admin',
   alunos: '/admin/alunos',
   professores: '/admin/professores',
   cursos: '/admin/cursos',
-  registrar_admin: '/admin/register',
-  registrar_ussuario: '/admin/register-user',
-  registrar_curso: '/admin/curso/registrar',
+  registrar: {
+    admin: '/admin/register',
+    ussuario: '/admin/register-user',
+    curso: '/admin/curso/registrar'
+  },
 }
 
 
 const router = createBrowserRouter([
   {
+    path: '/*', 
+    element: <Page404/>
+  },
+  {
     path: "/",
-    element: <App/>,
+    element: <App/>, 
     children: [
 
       {
@@ -93,7 +101,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: '/aluno',
-            element: <Aluno token={token}/>
+            element: <Aluno token={token}/>            
           },
           {
             path: '/aluno/edit',

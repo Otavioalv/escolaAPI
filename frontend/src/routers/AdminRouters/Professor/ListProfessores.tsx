@@ -50,7 +50,15 @@ export default function ListProfessores({token}: {token: saveTokenProps}) {
 
     return (
         <LoadingWrapper loading={loading}>
-            <DatasUserList user={list as []} buttons={buttonsList} title="Lista de Professores" useImg={true}/>
+            <>
+                
+
+                {list.length ? (
+                    <DatasUserList user={list as []} buttons={buttonsList} title="Lista de Professores" useImg={true}/>
+                ) : (
+                    'Não há professores cadastrados'
+                )}
+            </>
         </LoadingWrapper>
     )
 }

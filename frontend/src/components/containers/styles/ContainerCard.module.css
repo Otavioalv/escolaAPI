@@ -6,3 +6,16 @@
     margin: .5em;
     box-shadow: .2em .2em 1em var(--colorGrayOpacity);
 }
+
+@media screen  and (max-width: 1023px) { 
+    .containerCard {
+        max-width: 90vw;
+    }   
+}
+
+
+/* @media screen  and (max-width: 767px) { 
+    .containerCard {
+        background-color: black;
+    }   
+} */

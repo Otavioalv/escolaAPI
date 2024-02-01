@@ -80,6 +80,50 @@ h4 {
     border-top: 1px solid white;
 }
 
+@media screen  and (max-width: 1500px) {
+
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about_images {
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        display: flex;
+        flex-wrap: wrap;
+        display: flex;
+        --width-image: 100%;
+        --height-image: 450px;
+        width: var(--width-image);
+        height: var(--height-image);
+    }
+
+    .about_images div:nth-child(1){
+        width: calc(var(--width-image) - 45%);
+        height: calc(var(--height-image) - 45%);
+    }
+    
+    .about_images div:nth-child(2){
+        width: calc(var(--width-image) - 55%);
+        height: calc(var(--height-image) - 45%);
+        border-left: 1px solid white;
+    }
+    
+    .about_images div:nth-child(3){
+        width: var(--width-image);
+        height: calc(var(--height-image) - 55%);
+        border-top: 1px solid white;
+    }
+
+    
+    .fillDiv {
+        min-width: calc(var(--width-image) - 45px);
+    }
+}
+
+
 
 .about_logo {
     display: flex;
@@ -150,4 +194,106 @@ h4 {
 
 .aboutPlus div {
     margin: 2em 0;
+}
+
+@media screen  and (min-width: 767px) and (max-width: 1023px) {
+    
+    .home {
+        min-width: 95%;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about_images {
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        display: flex;
+        flex-wrap: wrap;
+        display: flex;
+        --width-image: 100%;
+        --height-image: 450px;
+        width: var(--width-image);
+        height: var(--height-image);
+    }
+
+    .about_images div:nth-child(1){
+        width: calc(var(--width-image) - 45%);
+        height: calc(var(--height-image) - 45%);
+    }
+    
+    .about_images div:nth-child(2){
+        width: calc(var(--width-image) - 55%);
+        height: calc(var(--height-image) - 45%);
+        border-left: 1px solid white;
+    }
+    
+    .about_images div:nth-child(3){
+        width: var(--width-image);
+        height: calc(var(--height-image) - 55%);
+        border-top: 1px solid white;
+    }
+
+    
+    .fillDiv {
+        min-width: calc(var(--width-image) - 45px);
+    }
+}
+
+@media screen  and (max-width: 767px) {
+    section {
+        padding: 1em;
+    }
+    .home {
+        min-width: 95%;
+        padding: 0;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .about_logo {
+        padding: 1em;
+    }
+
+    .about_images {
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        display: flex;
+        flex-wrap: wrap;
+        display: flex;
+        --width-image: 100%;
+        --height-image: 450px;
+        width: var(--width-image);
+        height: var(--height-image);
+    }
+
+    .about_images div:nth-child(1){
+        width: calc(var(--width-image) - 45%);
+        height: calc(var(--height-image) - 45%);
+    }
+    
+    .about_images div:nth-child(2){
+        width: calc(var(--width-image) - 55%);
+        height: calc(var(--height-image) - 45%);
+        border-left: 1px solid white;
+    }
+    
+    .about_images div:nth-child(3){
+        width: var(--width-image);
+        height: calc(var(--height-image) - 55%);
+        border-top: 1px solid white;
+    }
+
+    
+    .fillDiv {
+        min-width: calc(var(--width-image) - 45px);
+    }
 }
